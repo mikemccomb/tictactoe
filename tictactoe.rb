@@ -58,7 +58,7 @@ class Tictactoe
     win_column
     win_diagonal
     if @win
-      @turn = @turn + 11
+      @turn += 11
       puts "* * * Congratulations, Player #{player}! You won! * * *"
     end
   end
