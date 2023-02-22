@@ -28,12 +28,10 @@ class Tictactoe
   end
 
   def win_row
-    index = 0
-    while index < 3
-      if array[index][0] == array[index][1] && array[index][0] == array[index][2]
+    array.each do |row|
+      if row[0] == row[1] && row[0] == row[2]
         @win = true
       end
-      index += 1
     end
   end
 
