@@ -73,10 +73,8 @@ class Tictactoe
   end
 
   def board
-    index = 0
-    while index < array.length
-      puts array[index].join
-      index += 1
+    array.each do |item|
+      puts item.join
     end
   end
 
