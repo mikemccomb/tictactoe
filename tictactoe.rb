@@ -68,9 +68,8 @@ class Tictactoe
   def player
     if turn.odd?
       return @player = "X"
-    else
-      return @player = "O"
     end
+    return @player = "O"
   end
 
   def board
