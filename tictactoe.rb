@@ -1,5 +1,4 @@
 class Tictactoe
-
   def initialize(hash)
     @hash = hash
     @turn = 1
@@ -22,10 +21,10 @@ class Tictactoe
 
   def array
     return @array = [
-      [@hash[1], @hash[2], @hash[3]], 
-      [@hash[4], @hash[5], @hash[6]],
-      [@hash[7], @hash[8], @hash[9]]
-    ]
+             [@hash[1], @hash[2], @hash[3]],
+             [@hash[4], @hash[5], @hash[6]],
+             [@hash[7], @hash[8], @hash[9]],
+           ]
   end
 
   def win_row
@@ -34,7 +33,7 @@ class Tictactoe
       if array[index][0] == array[index][1] && array[index][0] == array[index][2]
         @win = true
       end
-      index = index + 1
+      index += 1
     end
   end
 
@@ -44,7 +43,7 @@ class Tictactoe
       if array[0][index] == array[1][index] && array[0][index] == array[2][index]
         @win = true
       end
-      index = index + 1
+      index += 1
     end
   end
 
@@ -78,7 +77,7 @@ class Tictactoe
     index = 0
     while index < array.length
       puts array[index].join
-      index = index + 1
+      index += 1
     end
   end
 
@@ -113,7 +112,7 @@ hash = {
   6 => " [6] ",
   7 => " [7] ",
   8 => " [8] ",
-  9 => " [9] "
+  9 => " [9] ",
 }
 
 test = Tictactoe.new(hash)
