@@ -86,9 +86,9 @@ class Tictactoe
       block = gets.chomp.to_i
       if @hash[block] == " [#{block}] "
         @hash[block] = " [#{player}] "
-        @turn = @turn + 1
+        @turn += 1
       else
-        puts " * * * #{@hash[0]} * * *"
+        puts "* * * #{@hash[0]} * * *"
       end
       win
     end
