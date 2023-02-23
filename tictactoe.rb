@@ -5,7 +5,7 @@ class Tictactoe
     @hash = hash
     @turn = 1
     @win = false
-    @player = ""
+    @player = "X"
     @array = []
   end
 
@@ -18,8 +18,8 @@ class Tictactoe
   end
 
   def win_row
-    array.each do |row|
-      if row[0] == row[1] && row[0] == row[2]
+    array.each do |block|
+      if block[0] == block[1] && block[0] == block[2]
         @win = true
       end
     end
@@ -29,7 +29,7 @@ class Tictactoe
     index = 0
     while index < 3
       if array[0][index] == array[1][index] && array[0][index] == array[2][index]
-        @win = true
+        return @win = true
       end
       index += 1
     end
@@ -67,7 +67,6 @@ class Tictactoe
   end
 
   def game
-    puts "* * * Let's play Tic-Tac-Toe! * * *"
     while @turn < 10
       board
       puts "* * * Player #{player}, pick a block. * * *"
@@ -100,5 +99,6 @@ hash = {
   9 => " [9] ",
 }
 
-test = Tictactoe.new(hash)
-test.game
+tictactoe = Tictactoe.new(hash)
+puts "* * * Let's play Tic-Tac-Toe! * * *"
+tictactoe.game
