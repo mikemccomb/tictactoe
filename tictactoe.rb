@@ -1,22 +1,12 @@
 class Tictactoe
+  attr_accessor :hash, :turn, :player, :win, :array
+
   def initialize(hash)
     @hash = hash
     @turn = 1
     @win = false
     @player = ""
     @array = []
-  end
-
-  def hash
-    return @hash
-  end
-
-  def turn
-    return @turn
-  end
-
-  def player
-    return @player
   end
 
   def array
