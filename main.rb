@@ -1,4 +1,5 @@
 require "./tictactoe.rb"
+require "./win.rb"
 
 hash = {
   0 => "Choose again",
